@@ -1,0 +1,7 @@
+# Data Question Answerer — Module 2+3+4 project
+# Core deps (run: pip install -r requirements.txt)
+langchain>=0.3
+langchain-openai>=0.2
+langchain-community>=0.3
+pandas
+streamlit

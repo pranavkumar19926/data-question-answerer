@@ -1,0 +1,33 @@
+id,question,type,gold_answer
+1,Production of rice in Punjab in 2022?,filter,13800000
+2,Production of wheat in Punjab in 2022?,filter,19500000
+3,Wheat production in Uttar Pradesh in 2022?,filter,36000000
+4,Rice production in West Bengal in 2022?,filter,16000000
+5,Sugarcane production in Uttar Pradesh in 2022?,filter,178000000
+6,Cotton production in Maharashtra in 2022?,filter,7800000
+7,Soybean production in Madhya Pradesh in 2022?,filter,7500000
+8,Rice production in Tamil Nadu in 2022?,filter,7500000
+9,Wheat production in Madhya Pradesh in 2021?,filter,19200000
+10,Soybean production in Maharashtra in 2021?,filter,5900000
+11,Total wheat production in 2022 across all states?,total,75500000
+12,Total rice production in 2022?,total,56000000
+13,Total soybean production in 2022?,total,13900000
+14,Average wheat production per state-row in 2022?,total,25166666
+15,How many production rows are there for 2022?,total,14
+16,How many states are in the database?,total,6
+17,Top 3 states by wheat production in 2022?,total,"Uttar Pradesh,Madhya Pradesh,Punjab"
+18,Top 2 states by rice production in 2022?,total,"West Bengal,Uttar Pradesh"
+19,Total production in North region in 2022?,join,262800000
+20,Which Kharif crops are grown? (list distinct),join,"Rice,Cotton,Soybean"
+21,Which Rabi crop is in the database?,join,Wheat
+22,Production of Kharif crops in Maharashtra in 2022?,join,17400000
+23,Which states grew soybean in 2022?,join,"Maharashtra,Madhya Pradesh"
+24,Total cotton production by state in 2022?,join,"Maharashtra 7800000,Madhya Pradesh 2800000"
+25,Yield states: which state-crop-year had production above 30000000 tonnes?,join,"Uttar Pradesh,178000000,36000000"
+26,Compare rice 2021 vs 2022 in Punjab?,join,"13200000,13800000"
+27,Which region does Punjab belong to?,join,North
+28,List Annual-season crops?,join,Sugarcane
+29,What is the capital of India?,unanswerable,UNANSWERABLE
+30,Who won the cricket match?,unanswerable,UNANSWERABLE
+31,Delete all production rows?,unanswerable,BLOCKED
+32,Production of maize in 2022?,unanswerable,UNANSWERABLE

@@ -1,0 +1,13 @@
+id,question,type,gold_answer
+1,Rice production in Durg district in 2010 (1000 tonnes)?,filter,1319.18
+2,Rice production in Chhattisgarh in 2010 (1000 tonnes)?,filter,6356.62
+3,Total wheat production in 2017 (1000 tonnes)?,total,110418.21
+4,Total rice production in 2015 (1000 tonnes)?,total,98820.51
+5,Top 3 states by rice production in 2015?,group,"West Bengal,Uttar Pradesh,Punjab"
+6,Average sugarcane yield in 2014 (kg per ha)?,total,6370
+7,How many states grew cotton in 2017?,total,16
+8,Soyabean production in Madhya Pradesh in 2016 (1000 tonnes)?,filter,6650
+9,Compare rice production in Punjab 2016 vs 2017 (1000 tonnes)?,group,"12638,13382"
+10,Which district had the highest rice yield in 2015?,filter,"Thirunelveli,4809"
+11,How many states grew rice in 2015?,total,20
+12,Wheat production in 2022 (1000 tonnes)?,unanswerable,UNANSWERABLE

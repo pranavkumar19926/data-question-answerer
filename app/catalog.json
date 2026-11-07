@@ -1,0 +1,160 @@
+{
+  "database": "db/app.db (SQLite, open read-only with mode=ro)",
+  "tables": [
+    {
+      "columns": [
+        {
+          "meaning": "Primary key, e.g. 1=Punjab",
+          "name": "state_id",
+          "type": "INTEGER"
+        },
+        {
+          "meaning": "Full state name, e.g. 'Maharashtra'",
+          "name": "state_name",
+          "type": "TEXT"
+        },
+        {
+          "meaning": "Zone: North/South/East/West/Central",
+          "name": "region",
+          "type": "TEXT"
+        },
+        {
+          "meaning": "Geographic area in sq km",
+          "name": "area_sqkm",
+          "type": "INTEGER"
+        }
+      ],
+      "description": "Indian states in this demo. Join to production via state_id.",
+      "name": "states"
+    },
+    {
+      "columns": [
+        {
+          "meaning": "Primary key, e.g. 1=Rice",
+          "name": "crop_id",
+          "type": "INTEGER"
+        },
+        {
+          "meaning": "Crop name: Rice, Wheat, Sugarcane, Cotton, Soybean",
+          "name": "crop_name",
+          "type": "TEXT"
+        },
+        {
+          "meaning": "Growing season: Kharif (monsoon), Rabi (winter), Annual",
+          "name": "season",
+          "type": "TEXT"
+        }
+      ],
+      "description": "Crops. Join to production via crop_id.",
+      "name": "crops"
+    },
+    {
+      "columns": [
+        {
+          "meaning": "FK to states.state_id",
+          "name": "state_id",
+          "type": "INTEGER"
+        },
+        {
+          "meaning": "FK to crops.crop_id",
+          "name": "crop_id",
+          "type": "INTEGER"
+        },
+        {
+          "meaning": "Harvest year, e.g. 2022",
+          "name": "year",
+          "type": "INTEGER"
+        },
+        {
+          "meaning": "Sown area in hectares. Use SUM for totals.",
+          "name": "area_ha",
+          "type": "INTEGER"
+        },
+        {
+          "meaning": "Production in tonnes. Use SUM for totals, AVG for average.",
+          "name": "production_tonnes",
+          "type": "REAL"
+        }
+      ],
+      "description": "Yearly crop production per state. This is the fact table for totals, filters and joins.",
+      "name": "production"
+    },
+    {
+      "name": "district_yield",
+      "description": "District-level crop production (sample from data.gov.in format). Join to states on state_name.",
+      "columns": [
+        {
+          "name": "district",
+          "type": "TEXT",
+          "meaning": "District name, e.g. Ludhiana"
+        },
+        {
+          "name": "state_name",
+          "type": "TEXT",
+          "meaning": "State name, joins to states.state_name"
+        },
+        {
+          "name": "crop_name",
+          "type": "TEXT",
+          "meaning": "Crop name, joins to crops.crop_name"
+        },
+        {
+          "name": "year",
+          "type": "INTEGER",
+          "meaning": "Harvest year (2022)"
+        },
+        {
+          "name": "area_ha",
+          "type": "INTEGER",
+          "meaning": "Sown area in hectares"
+        },
+        {
+          "name": "production_tonnes",
+          "type": "INTEGER",
+          "meaning": "Production in tonnes"
+        }
+      ]
+    },
+    {
+      "name": "real_crop_production",
+      "description": "REAL district-level crop data, India 2010-2017 (data.gov.in APY via GitHub mirror, file data/raw/Crops_data.csv). 34,902 rows, 20 states, 23 crops. One row per district-crop-year.",
+      "columns": [
+        {
+          "name": "state_name",
+          "type": "TEXT",
+          "meaning": "State, e.g. 'West Bengal', 'Punjab'. 20 states."
+        },
+        {
+          "name": "dist_name",
+          "type": "TEXT",
+          "meaning": "District within the state, e.g. Durg."
+        },
+        {
+          "name": "year",
+          "type": "INTEGER",
+          "meaning": "Harvest year 2010-2017. No other years exist."
+        },
+        {
+          "name": "crop",
+          "type": "TEXT",
+          "meaning": "Crop: Rice, Wheat, Maize, Sugarcane, Cotton, Soyabean (note spelling), Groundnut, Chickpea, Barley + 14 more."
+        },
+        {
+          "name": "area_1000ha",
+          "type": "REAL",
+          "meaning": "Sown area in THOUSAND hectares."
+        },
+        {
+          "name": "production_1000tons",
+          "type": "REAL",
+          "meaning": "Production in THOUSAND tonnes. SUM for totals."
+        },
+        {
+          "name": "yield_kgpha",
+          "type": "REAL",
+          "meaning": "Yield in kg per hectare. AVG for averages."
+        }
+      ]
+    }
+  ]
+}
