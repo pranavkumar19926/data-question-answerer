@@ -4,3 +4,4 @@ db/*.db
 logs/*.jsonl
 .env
 .streamlit/
+_pip_tmp/
